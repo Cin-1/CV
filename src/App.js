@@ -3,7 +3,7 @@ import Form from "./Components/Contact/Form";
 function App() {
   return (
     <div>
-      <h1>CV</h1>
+      <h1>La menta granizada no es un gusto de helado</h1>
       <Form />
     </div>
   );
