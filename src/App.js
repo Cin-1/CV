@@ -6,11 +6,8 @@ import Home from "./Components/layout/Home";
 function App() {
   return (
     <Fragment>
-
       <Navegation/>
-      <br/>
       <Home/>
-      <br/>
       <Form />
 
     </Fragment>
