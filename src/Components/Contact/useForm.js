@@ -6,6 +6,13 @@ const useForm = (callback, validate) => {
     email: "",
     msj: "",
   });
+  const reset = () =>
+    setValues({
+      name: "",
+      email: "",
+      msj: "",
+    });
+
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -35,7 +42,7 @@ const useForm = (callback, validate) => {
     handleSubmit,
     values,
     errors,
+    reset,
   };
 };
-
 export default useForm;

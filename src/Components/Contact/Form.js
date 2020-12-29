@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import useForm from "./useForm";
+import useForm, { reset } from "./useForm";
 import validate from "./validate";
 import Swal from "sweetalert2";
+import emailjs from "emailjs-com";
 
 const Toast = Swal.mixin({
   toast: true,
@@ -15,18 +16,35 @@ const Toast = Swal.mixin({
   },
 });
 const Form = () => {
-  const [isSent, setIsSent] = useState(false);
   const submit = () => {
-    console.log("enviando....");
-    fetch(`https://hooks.zapier.com/hooks/catch/9191970/ocq863q/`, {
-      method: "POST",
-      body: JSON.stringify({ email, comment, key: feature }).then(() => setIsSent(true))};
-    Toast.fire({
-      icon: "success",
-      title: "Se enviaron los datos. Muchas gracias!",
-    });
+    let templateParams = {
+      from_name: values.email,
+      to_name: "cinthiapardos@gmail.com",
+      subject: values.name,
+      message: values.msj,
+    };
+    emailjs
+      .send(
+        "service_oaz8vle",
+        "template_wo294ol",
+        templateParams,
+        "user_Ci5YDaJ2f4SFSXgKJX3C2"
+      )
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+          Toast.fire({
+            icon: "success",
+            title: "Se enviaron los datos. Muchas gracias!",
+          });
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+    reset();
   };
-  const { values, handleChange, handleSubmit, errors } = useForm(
+  const { values, handleChange, handleSubmit, errors, reset } = useForm(
     submit,
     validate
   );
