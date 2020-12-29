@@ -1,11 +1,16 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Form from "./Components/Contact/Form";
+import Navegation from "./Components/layout/Navegation";
+import Home from "./Components/layout/Home";
+
 function App() {
   return (
-    <div>
-      <h1>CV</h1>
+    <Fragment>
+      <Navegation/>
+      <Home/>
       <Form />
-    </div>
+
+    </Fragment>
   );
 }
 
