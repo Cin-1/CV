@@ -1,11 +1,16 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Form from "./Components/Contact/Form";
+import Navegation from "./Components/layout/Navegation";
+
 function App() {
   return (
-    <div>
-      <h1>La menta granizada no es un gusto de helado</h1>
+    <Fragment>
+
+      <Navegation/>
+
       <Form />
-    </div>
+
+      </Fragment>
   );
 }
 
