@@ -6,15 +6,18 @@ const useForm = (callback, validate) => {
     email: "",
     msj: "",
   });
-  const reset = () =>
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const reset = () => {
     setValues({
       name: "",
       email: "",
       msj: "",
     });
+    setIsSubmitting(false);
+  };
 
   const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
