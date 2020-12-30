@@ -7,6 +7,8 @@ import styled from "@emotion/styled";
 
 const DivP = styled.div`
   background-color: black;
+  padding-bottom: 10%;
+  padding-top: 5%;
 `;
 const Title = styled.h1`
   font-family: "Ubuntu", sans-serif;
@@ -67,6 +69,7 @@ const Input = styled.input`
   box-sizing: border-box;
 `;
 const Boton = styled.input`
+  font-family: "Ubuntu", sans-serif;
   display: block;
   width: 100%;
   display: inline-block;
@@ -83,7 +86,6 @@ const Boton = styled.input`
   box-sizing: border-box;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   color: black;
   text-align: center;
