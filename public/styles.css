@@ -4,3 +4,16 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
+.active {
+    padding: 15px 0;
+    background: crimson;
+}
+
+.active2 {
+    color: #fff !important;
+}
+
+.active3 :hover {
+    color: #fff !important;
+}

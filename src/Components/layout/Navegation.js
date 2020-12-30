@@ -1,11 +1,13 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import styled from '@emotion/styled';
 
-const Navbar = styled.nav`
+
+const NavBar = styled.nav`
     position: fixed;
     width: 100%;
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
 `;
 
 const NavFlex = styled.div`
@@ -17,16 +19,17 @@ const NavFlex = styled.div`
 const LogoContainer = styled.div`
     max-width: 1300px;
     margin-left: 100px;
-
-    span {
-        color: crimson;
-    }
 `;
+
 
 const Logo = styled.a`
     color: #fff;
     font-size: 35px;
     font-weight: 600;
+`;
+
+const Span = styled.span`
+    color: crimson;
 `;
 
 const List = styled.ul`
@@ -52,22 +55,34 @@ const Linkerino = styled.a`
 `;
 
 const Navegation = () => {
+
+    const [ navbar, setNavbar] = useState(false);
+
+    const changeBackground = () => {
+        if(window.scrollY >= 20) {
+            setNavbar(true);
+        } else {
+            setNavbar(false);
+        }
+    }
+
+    window.addEventListener('scroll', changeBackground);
+
     return ( 
         <Fragment>
-            <Navbar>
+            <NavBar className={ navbar ? 'active' : null }>
                 <NavFlex>
-                    <LogoContainer><Logo href="#">Portfo<span>lio.</span></Logo></LogoContainer>
+                    <LogoContainer><Logo href="#">Portfo<Span className={ navbar ? 'active2' : null }>lio.</Span></Logo></LogoContainer>
                     <List>
-                        <ListItems><Linkerino href="#">Lorem</Linkerino></ListItems>
-                        <ListItems><Linkerino href="#">Lorem</Linkerino></ListItems>
-                        <ListItems><Linkerino href="#">Lorem</Linkerino></ListItems>
-                        <ListItems><Linkerino href="#">Lorem</Linkerino></ListItems>
-                        <ListItems><Linkerino href="#">Lorem</Linkerino></ListItems>
-                        <ListItems><Linkerino href="#">Lorem</Linkerino></ListItems>
+                        <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Lorem</Linkerino></ListItems>
+                        <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Lorem</Linkerino></ListItems>
+                        <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Lorem</Linkerino></ListItems>
+                        <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Lorem</Linkerino></ListItems>
+                        <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Lorem</Linkerino></ListItems>
+                        <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Lorem</Linkerino></ListItems>
                     </List> 
                 </NavFlex>
-            </Navbar>
-
+            </NavBar>
             
         </Fragment>
      );
