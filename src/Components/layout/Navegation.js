@@ -8,24 +8,27 @@ const NavBar = styled.nav`
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
-`;
+`;    
 
 const NavFlex = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 const LogoContainer = styled.div`
-    max-width: 1300px;
-    margin-left: 100px;
+  max-width: 1300px;
+  margin-left: 100px;
+
+  span {
+    color: crimson;
+  }
 `;
 
-
 const Logo = styled.a`
-    color: #fff;
-    font-size: 35px;
-    font-weight: 600;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
 `;
 
 const Span = styled.span`
@@ -33,25 +36,25 @@ const Span = styled.span`
 `;
 
 const List = styled.ul`
-    list-style: none;
-    margin-right: 100px;
+  list-style: none;
+  margin-right: 100px;
 `;
 
 const ListItems = styled.li`
-    list-style: none;
-    display: inline-block;
+  list-style: none;
+  display: inline-block;
 `;
 
 const Linkerino = styled.a`
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    margin-left: 25px;
-    transition: color 0.3s ease;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
 
-    :hover {
-        color: crimson;
-    }
+  :hover {
+    color: crimson;
+  }
 `;
 
 const Navegation = () => {
