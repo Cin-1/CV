@@ -1,5 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import styled from '@emotion/styled';
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 const NavBar = styled.nav`
@@ -38,11 +40,30 @@ const Span = styled.span`
 const List = styled.ul`
   list-style: none;
   margin-right: 100px;
+
+  @media screen and (max-width: 768px) {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #111;
+    text-align: center;
+    padding-top: 80px;
+
+    :active {
+      left: 0;
+    }
+  }
 `;
 
 const ListItems = styled.li`
   list-style: none;
   display: inline-block;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 `;
 
 const Linkerino = styled.a`
@@ -53,7 +74,26 @@ const Linkerino = styled.a`
   transition: color 0.3s ease;
 
   :hover {
-    color: crimson;
+    color: crimson; 
+  }
+
+  @media screen and (max-width: 768px) {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;    
+  } 
+`;
+
+const NavIcon = styled.div`
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    z-index: 999;
+    margin-right: 50px;
   }
 `;
 
@@ -84,6 +124,9 @@ const Navegation = () => {
                         <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Lorem</Linkerino></ListItems>
                         <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Lorem</Linkerino></ListItems>
                     </List> 
+                    <NavIcon className="nav-icon">
+                      <FontAwesomeIcon icon={faBars} /> 
+                    </NavIcon>
                 </NavFlex>
             </NavBar>
             
