@@ -50,10 +50,6 @@ const List = styled.ul`
     background: #111;
     text-align: center;
     padding-top: 80px;
-
-    :active {
-      left: 0;
-    }
   }
 `;
 
@@ -100,6 +96,7 @@ const NavIcon = styled.div`
 const Navegation = () => {
 
     const [ navbar, setNavbar] = useState(false);
+    const [ toggle, setToggle ] = useState(false);
 
     const changeBackground = () => {
         if(window.scrollY >= 20) {
@@ -116,7 +113,7 @@ const Navegation = () => {
             <NavBar className={ navbar ? 'active' : null }>
                 <NavFlex>
                     <LogoContainer><Logo href="#">Portfo<Span className={ navbar ? 'active2' : null }>lio.</Span></Logo></LogoContainer>
-                    <List>
+                    <List className={ toggle ? 'menu activetoggle' : null }>
                         <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Lorem</Linkerino></ListItems>
                         <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Lorem</Linkerino></ListItems>
                         <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Lorem</Linkerino></ListItems>
@@ -124,8 +121,11 @@ const Navegation = () => {
                         <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Lorem</Linkerino></ListItems>
                         <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Lorem</Linkerino></ListItems>
                     </List> 
-                    <NavIcon className="nav-icon">
-                      <FontAwesomeIcon icon={faBars} /> 
+                    <NavIcon>
+                      <FontAwesomeIcon
+                        onClick={() => setToggle(!toggle)}
+                        icon={faBars}
+                      />
                     </NavIcon>
                 </NavFlex>
             </NavBar>
