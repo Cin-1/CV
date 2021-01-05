@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const NavBar = styled.nav`
     position: fixed;
     width: 100%;
+    z-index: 999;
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
@@ -114,8 +115,8 @@ const Navegation = () => {
                 <NavFlex>
                     <LogoContainer><Logo href="#">Portfo<Span className={ navbar ? 'active2' : null }>lio.</Span></Logo></LogoContainer>
                     <List className={ toggle ? 'menu activetoggle' : null }>
-                        <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Lorem</Linkerino></ListItems>
-                        <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Lorem</Linkerino></ListItems>
+                        <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Inicio</Linkerino></ListItems>
+                        <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Conóceme</Linkerino></ListItems>
                         <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Lorem</Linkerino></ListItems>
                         <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Lorem</Linkerino></ListItems>
                         <ListItems className={ navbar ? 'active3' : null }><Linkerino href="#">Lorem</Linkerino></ListItems>
