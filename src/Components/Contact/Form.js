@@ -11,17 +11,39 @@ const DivP = styled.div`
   padding-top: 5%;
 `;
 const Title = styled.h1`
+  position: relative;
   font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
   color: white;
-  text-align: center;
+
+  :before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 195px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+  }
+
+  :after {
+    content: "Get in Touch";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    background: black;
+    transform: translateX(-50%);
+  }
 `;
-const Sub = styled.p`
-  font-family: "Ubuntu", sans-serif;
-  color: crimson;
-  text-align: center;
-  font-weight: 800;
-  margin: 2%;
-`;
+
 const Sub2 = styled.p`
   font-family: "Ubuntu", sans-serif;
   color: white;
@@ -153,7 +175,6 @@ const Form = () => {
   return (
     <DivP>
       <Title>Contact me</Title>
-      <Sub>- Get in touch -</Sub>
       <Wrap>
         <Formu onSubmit={(e) => handleSubmit(e)}>
           <Sub2>Gracias por contactarme te respondere a la brevedad!</Sub2>

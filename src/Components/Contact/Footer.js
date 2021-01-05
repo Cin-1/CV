@@ -3,9 +3,36 @@ import styled from "@emotion/styled";
 import useClipboard from "react-use-clipboard";
 
 const Title = styled.h1`
+  position: relative;
   font-family: "Ubuntu", sans-serif;
-  color: white;
   text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+
+  :before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 195px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+  }
+
+  :after {
+    content: "Extras";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: white;
+    padding: 5px;
+    background: crimson;
+    transform: translateX(-50%);
+  }
 `;
 
 const FooterSty = styled.footer`
@@ -54,7 +81,6 @@ const Footer = () => {
         </Datos>
         <Datos>
           <h3>Redes</h3>
-          <Parrafo onClick={setCopiedC}>{cel}</Parrafo>
         </Datos>
         <Datos>
           <h3>Email</h3>
