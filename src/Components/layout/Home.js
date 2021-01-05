@@ -8,6 +8,7 @@ const Fondo = styled.section`
     color: #fff;
     min-height: 500px;
     font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 100px;
 `;
 
 const WhoIam = styled.div`
@@ -39,14 +40,32 @@ const Job = styled.span`
     font-weight: 500;
 `;
 
+const HireButton = styled.a`
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: solid 2px crimson;
+    transition: all 0.3s ease;
+
+    :hover {
+        color: crimson;
+        background: none;
+    }
+`;
+
 const Home = () => {
     return ( 
-        <Fondo className="fondo">
+        <Fondo>
             <WhoIam>
                 <TextContainer>
                     <div><MeText1>Hola, mi nombre es</MeText1></div>
                     <div><MeText2>Monkey D.Luffy</MeText2></div>
                     <div><MeText3>Y soy un <Job>Pirata</Job></MeText3></div>
+                    <HireButton href="#">Contrátame</HireButton>
                 </TextContainer>
             </WhoIam>
         </Fondo>

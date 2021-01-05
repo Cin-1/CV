@@ -4,3 +4,24 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
+/* Navegation.js styles */
+
+.active {
+    padding: 15px 0;
+    background: crimson;
+}
+
+.active2 {
+    color: #fff !important;
+}
+
+.active3 :hover {
+    color: #fff !important;
+}
+
+/* Toggle Button */
+
+.menu.activetoggle {
+    left: 0;
+  }
