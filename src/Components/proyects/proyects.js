@@ -9,6 +9,7 @@ import {
   ButtonNext,
   ButtonFirst,
   ButtonLast,
+  Dot,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
@@ -113,33 +114,8 @@ const Proyects = () => {
           naturalSlideHeight={125}
           totalSlides={2}
         >
-          <DivBotton>
-            <ButtonBack
-              style={{
-                height: "13px",
-                width: "13px",
-                margin: "0 5px",
-                outline: "none !important",
-                border: " 5px crimson",
-                borderRadius: "50%",
-                backgroundColor: "black",
-              }}
-            ></ButtonBack>
-            <ButtonNext
-              style={{
-                height: "13px",
-                width: "13px",
-                margin: "0 5px",
-                outline: "none !important",
-                border: "crimson",
-                borderRadius: "50%",
-                color: "red",
-                backgroundColor: "black",
-              }}
-            ></ButtonNext>
-          </DivBotton>
           <div>
-            <Slider>
+            <Slider style={{ maxHeight: "280px" }}>
               <Slide index={0}>
                 <DivFlex>
                   <DivImg>
@@ -184,6 +160,31 @@ const Proyects = () => {
                 </DivFlex>
               </Slide>
             </Slider>
+            <DivBotton>
+              <ButtonBack
+                style={{
+                  height: "13px",
+                  width: "13px",
+                  margin: "0 5px",
+                  outline: "none !important",
+                  border: " 5px crimson",
+                  borderRadius: "50%",
+                  backgroundColor: "black",
+                }}
+              ></ButtonBack>
+              <ButtonNext
+                style={{
+                  height: "13px",
+                  width: "13px",
+                  margin: "0 5px",
+                  outline: "none !important",
+                  border: "crimson",
+                  borderRadius: "50%",
+                  color: "red",
+                  backgroundColor: "black",
+                }}
+              ></ButtonNext>
+            </DivBotton>
           </div>
         </CarouselProvider>
       </DivP>
