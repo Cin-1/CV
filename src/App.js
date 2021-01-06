@@ -3,8 +3,9 @@ import Form from "./Components/Contact/Form";
 import Navegation from "./Components/layout/Navegation";
 import Home from "./Components/layout/Home";
 import Footer from "./Components/Contact/Footer";
-import Proyects from "./Components/proyects/proyects";
+import Proyects from "./Components/layout/proyects";
 import AboutMe from "./Components/layout/AboutMe";
+import Resume from "./Components/layout/Resume";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Navegation />
       <Home />
       <AboutMe />
+      <Resume />
       <Proyects />
       <Form />
       <Footer />
