@@ -6,6 +6,7 @@ import Footer from "./Components/Contact/Footer";
 import Proyects from "./Components/layout/proyects";
 import AboutMe from "./Components/layout/AboutMe";
 import Resume from "./Components/layout/Resume";
+import Technologies from "./Components/layout/Technologies";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navegation />
       <Home />
       <AboutMe />
+      <Technologies />
       <Resume />
       <Proyects />
       <Form />
