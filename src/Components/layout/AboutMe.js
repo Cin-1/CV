@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from "@emotion/styled";
 
+const AboutContainer = styled.div`
+    margin-bottom: 100px;
+`;
+
 const AboutTitle = styled.h2`
     position: relative;
     font-family: 'Ubuntu', sans-serif;
@@ -106,7 +110,7 @@ const CRBotton = styled.a`
 const AboutMe = () => {
     return ( 
         <section>
-            <div>
+            <AboutContainer>
                 <AboutTitle>Conóceme</AboutTitle>
                 <AboutGrid>
                     <div>
@@ -119,7 +123,7 @@ const AboutMe = () => {
                         <CRBotton href="#">Descargar CV</CRBotton>
                     </AboutColumnRight>
                 </AboutGrid>
-            </div>
+            </AboutContainer>
         </section>
      );
 }
